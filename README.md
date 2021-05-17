@@ -2,7 +2,7 @@
 
 ## **Summary**
 
-A large set of data was collected and find the top ten bacteria living in the respondents belly buttons.  This was used so respondents could look up their ID number and view the results.  This way, if future companies needed said bacteria for potential meat substitutes in the future, they would know if they were a condidate for potential bacteria donorship.
+A large set of data was collected to find the top ten bacteria living in the respondents belly buttons.  This was used so respondents could look up their ID number and view the results.  This way, if future companies needed said bacteria for potential meat substitutes in the future, they would know if they were a condidate for potential bacteria donorship.
 
 ## **Result**
 
