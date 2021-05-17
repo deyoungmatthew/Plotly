@@ -119,50 +119,38 @@ function buildCharts(sample) {
     Plotly.newPlot("bubble", bubbleChartData, bubbleChartLayout);
     
     // 1. Create a variable that filters the metadata array for the object with the desired sample number.
+    var metadata = data.metadata;
 
     // Create a variable that holds the first sample in the array.
-  
+    var gaugeFirstArray = metadata.filter(metaObj => metaObj.id == sample);
 
     // 2. Create a variable that holds the first sample in the metadata array.
-    
-
-    // Create variables that hold the otu_ids, otu_labels, and sample_values.
-
+    var guageFirstMeta = gaugeFirstArray[0];
 
     // 3. Create a variable that holds the washing frequency.
-   
+   var washFreq = guageFirstMeta.wfreq;
 
-    // Create the yticks for the bar chart.
-    // Hint: Get the the top 10 otu_ids and map them in descending order 
-    // so the otu_ids with the most bacteria are last. 
-    var yticks = 
-
-    // Create the trace for the bar chart. 
-    var barData = [
-      
-    ];
-    // Create the layout for the bar chart. 
-    var barLayout = {
-      
-    };
-
-    // Use Plotly to plot the data with the layout. 
-
-    // Create the trace for the bubble chart.
-    var bubbleData = [
-   
-    ];
-
-    // Create the layout for the bubble chart.
-    var bubbleLayout = {
-      
-    };
-
-    // D2: 3. Use Plotly to plot the data with the layout.
-   
-    
+        
     // 4. Create the trace for the gauge chart.
-    var gaugeData = [
+    var gaugeData = [{
+      value: washFreq,
+      title: "BELLY BUTTON WASHING FREQUENCY",
+      type: "indicator",
+      mode: "guage+number",
+      guage: {
+        axis: { range: [null, 10], tickwidth: 1, tickcolor: "darkblue"},
+        bar: { color: "darkblue"},
+        bgcolor: "white",
+        borderwidth: 2,
+        steps: [
+          {range: [0, 2], color: "red"},
+          {range: [2, 4], color: "darkorange"},
+          {range: [4, 6], color: "yellow"},
+          {range: [6, 8], color: "chartreuse"},
+          {range: [8, 10], color: "darkgreen"}
+        ]
+      }
+    }
      
     ];
     
